@@ -26,9 +26,11 @@ App CSS (`src/index.css`):
 ```css
 @import "tailwindcss";
 @import "@noletorious/ui/styles.css";
-@source "../node_modules/@noletorious/ui/dist";
 @import "./brand.css";
+@source "../node_modules/@noletorious/ui/dist";
 ```
+
+Keep every `@import` before `@source`. CSS requires imports first, and a `@source` line in the middle triggers a build warning.
 
 `@source` is required with the PostCSS plugin (`@tailwindcss/postcss`). Without it Tailwind does not scan `node_modules` and the library components render unstyled. The Vite plugin (`@tailwindcss/vite`) picks them up on its own, but keeping the line does no harm.
 

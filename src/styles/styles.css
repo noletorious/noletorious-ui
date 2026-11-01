@@ -4,8 +4,8 @@
  * Import this AFTER `@import "tailwindcss"` in the app's CSS:
  *   @import "tailwindcss";
  *   @import "@noletorious/ui/styles.css";
- *   @source "../node_modules/@noletorious/ui/dist";
  *   @import "./brand.css";   (app accent overrides, optional)
+ *   @source "../node_modules/@noletorious/ui/dist";   (after all imports)
  *
  * Light values live in @theme static (every variable is always emitted).
  * Dark values override the same variables under .dark.
