@@ -101,7 +101,7 @@ npm run contrast       # WCAG check of the token pairs, both themes
 npm run build          # dist/ (also runs on install via "prepare")
 ```
 
-Every change goes through: stories in both themes, `npm run contrast`, `npm run type-check`, `npm run build`. See `docs/ui-workflow.md` in the `single-purpose` lab for the full release and rollout flow.
+Every change goes through: stories in both themes, `npm run contrast`, `npm run type-check`, `npm run build`. See `docs/ui-workflow.md` in SP (the `single-purpose` repo) for the full release and rollout flow.
 
 ## Versions
 
