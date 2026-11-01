@@ -1,41 +1,42 @@
-import React from "react";
-import { ComponentStory, ComponentMeta } from "@storybook/react";
+import type { Meta, StoryObj } from '@storybook/react'
+import { Button } from '../src'
 
-import { Button } from "../components/Button";
-
-// More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
-export default {
-  title: "Components/Button",
+const meta = {
+  title: 'Components/Button',
   component: Button,
-  // More on argTypes: https://storybook.js.org/docs/react/api/argtypes
+  args: { children: 'Button' },
   argTypes: {
-    backgroundColor: { control: "color" },
+    variant: {
+      control: 'select',
+      options: ['default', 'destructive', 'outline', 'secondary', 'ghost', 'link'],
+    },
+    size: { control: 'select', options: ['default', 'sm', 'lg', 'icon'] },
   },
-} as ComponentMeta<typeof Button>;
+} satisfies Meta<typeof Button>
 
-// More on component templates: https://storybook.js.org/docs/react/writing-stories/introduction#using-args
-const Template: ComponentStory<typeof Button> = (args) => <Button {...args} />;
+export default meta
+type Story = StoryObj<typeof meta>
 
-export const Primary = Template.bind({});
-// More on args: https://storybook.js.org/docs/react/writing-stories/args
-Primary.args = {
-  primary: true,
-  label: "Button",
-};
+export const Default: Story = {}
 
-export const Secondary = Template.bind({});
-Secondary.args = {
-  label: "Button",
-};
+export const Destructive: Story = { args: { variant: 'destructive', children: 'Delete' } }
+export const Outline: Story = { args: { variant: 'outline' } }
+export const Secondary: Story = { args: { variant: 'secondary' } }
+export const Ghost: Story = { args: { variant: 'ghost' } }
+export const Link: Story = { args: { variant: 'link' } }
+export const Disabled: Story = { args: { disabled: true } }
 
-export const Large = Template.bind({});
-Large.args = {
-  size: "large",
-  label: "Button",
-};
-
-export const Small = Template.bind({});
-Small.args = {
-  size: "small",
-  label: "Button",
-};
+export const AllVariants: Story = {
+  render: () => (
+    <div className="flex flex-wrap items-center gap-3">
+      <Button>Default</Button>
+      <Button variant="secondary">Secondary</Button>
+      <Button variant="outline">Outline</Button>
+      <Button variant="ghost">Ghost</Button>
+      <Button variant="link">Link</Button>
+      <Button variant="destructive">Destructive</Button>
+      <Button size="sm">Small</Button>
+      <Button size="lg">Large</Button>
+    </div>
+  ),
+}
