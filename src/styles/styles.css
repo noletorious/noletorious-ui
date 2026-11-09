@@ -1,0 +1,52 @@
+/*
+ * @noletorious/ui styles.
+ *
+ * Import this AFTER `@import "tailwindcss"` in the app's CSS:
+ *   @import "tailwindcss";
+ *   @import "@noletorious/ui/styles.css";
+ *   @import "./brand.css";   (app accent overrides, optional)
+ *   @source "../node_modules/@noletorious/ui/dist";   (after all imports)
+ *
+ * Color tokens live in tokens/*.json and are generated into tokens.css
+ * (`npm run tokens:build`). Never edit tokens.css by hand.
+ * Run `npm run tokens:check` after any token change. Text pairs need 4.5:1, UI boundaries 3:1.
+ */
+
+@import "./tokens.css";
+
+@custom-variant dark (&:is(.dark, .dark *));
+
+@layer base {
+  * {
+    border-color: var(--color-border);
+  }
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  }
+
+  /* Pointer cursor for interactive elements */
+  button,
+  a,
+  input[type="button"],
+  input[type="submit"],
+  input[type="reset"],
+  input[type="checkbox"],
+  input[type="radio"],
+  select,
+  [role="button"],
+  [role="checkbox"],
+  [role="menuitem"],
+  [role="tab"],
+  [role="switch"],
+  summary {
+    cursor: pointer;
+  }
+
+  button:disabled,
+  input:disabled,
+  [aria-disabled="true"] {
+    cursor: not-allowed;
+  }
+}

@@ -1,0 +1,21 @@
+# Guard the design tokens on every push and pull request.
+# Fails if tokens.css was edited by hand or not rebuilt after a change in tokens/,
+# or if any text/UI color pair drops below WCAG contrast (4.5:1 text, 3:1 UI).
+name: tokens
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - run: npm run tokens:check
+      - run: npm run type-check

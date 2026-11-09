@@ -1,0 +1,94 @@
+{
+  "core": {
+    "gray": {
+      "100": {
+        "$type": "color",
+        "$value": "hsl(0 0% 100%)"
+      }
+    },
+    "red": {
+      "51": {
+        "$type": "color",
+        "$value": "hsl(0 72% 51%)"
+      }
+    },
+    "blue": {
+      "50": {
+        "$type": "color",
+        "$value": "hsl(217 91% 50%)"
+      },
+      "53": {
+        "$type": "color",
+        "$value": "hsl(221 83% 53%)"
+      },
+      "60": {
+        "$type": "color",
+        "$value": "hsl(217 91% 60%)"
+      }
+    },
+    "paper": {
+      "98": {
+        "$type": "color",
+        "$value": "hsl(210 20% 98%)"
+      }
+    },
+    "slate": {
+      "4": {
+        "$type": "color",
+        "$value": "hsl(224 71% 4%)"
+      },
+      "8": {
+        "$type": "color",
+        "$value": "hsl(222 47% 8%)"
+      },
+      "11": {
+        "$type": "color",
+        "$value": "hsl(222 47% 11%)"
+      },
+      "14": {
+        "$type": "color",
+        "$value": "hsl(217 33% 14%)"
+      },
+      "15": {
+        "$type": "color",
+        "$value": "hsl(217 33% 15%)"
+      },
+      "18": {
+        "$type": "color",
+        "$value": "hsl(217 33% 18%)"
+      },
+      "36": {
+        "$type": "color",
+        "$value": "hsl(215 25% 36%)"
+      },
+      "45": {
+        "$type": "color",
+        "$value": "hsl(217 20% 45%)"
+      },
+      "50": {
+        "$type": "color",
+        "$value": "hsl(214 16% 50%)"
+      },
+      "70": {
+        "$type": "color",
+        "$value": "hsl(215 20% 70%)"
+      },
+      "84": {
+        "$type": "color",
+        "$value": "hsl(214 32% 84%)"
+      },
+      "91": {
+        "$type": "color",
+        "$value": "hsl(214 32% 91%)"
+      },
+      "93": {
+        "$type": "color",
+        "$value": "hsl(210 40% 93%)"
+      },
+      "98": {
+        "$type": "color",
+        "$value": "hsl(210 40% 98%)"
+      }
+    }
+  }
+}

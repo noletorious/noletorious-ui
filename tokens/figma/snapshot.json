@@ -1,0 +1,150 @@
+{
+  "fileKey": "ZV0D1XbB04hB4R4nCKCamc",
+  "readAt": "2026-11-09",
+  "collections": {
+    "core": {
+      "gray/100": [
+        255,
+        255,
+        255
+      ],
+      "red/51": [
+        220,
+        40,
+        40
+      ],
+      "blue/50": [
+        11,
+        100,
+        244
+      ],
+      "blue/53": [
+        36,
+        99,
+        235
+      ],
+      "blue/60": [
+        60,
+        131,
+        246
+      ],
+      "paper/98": [
+        249,
+        250,
+        251
+      ],
+      "slate/4": [
+        3,
+        7,
+        17
+      ],
+      "slate/8": [
+        11,
+        17,
+        30
+      ],
+      "slate/11": [
+        15,
+        23,
+        41
+      ],
+      "slate/14": [
+        24,
+        33,
+        47
+      ],
+      "slate/15": [
+        26,
+        35,
+        51
+      ],
+      "slate/18": [
+        31,
+        42,
+        61
+      ],
+      "slate/36": [
+        69,
+        88,
+        115
+      ],
+      "slate/45": [
+        92,
+        109,
+        138
+      ],
+      "slate/50": [
+        107,
+        125,
+        148
+      ],
+      "slate/70": [
+        163,
+        176,
+        194
+      ],
+      "slate/84": [
+        201,
+        212,
+        227
+      ],
+      "slate/91": [
+        225,
+        231,
+        239
+      ],
+      "slate/93": [
+        230,
+        237,
+        244
+      ],
+      "slate/98": [
+        248,
+        250,
+        252
+      ]
+    },
+    "semantic-light": {
+      "background": "paper/98",
+      "foreground": "slate/11",
+      "card": "gray/100",
+      "card-foreground": "slate/11",
+      "popover": "gray/100",
+      "popover-foreground": "slate/11",
+      "primary": "blue/53",
+      "primary-foreground": "slate/98",
+      "secondary": "slate/93",
+      "secondary-foreground": "slate/11",
+      "muted": "slate/91",
+      "muted-foreground": "slate/36",
+      "accent": "blue/50",
+      "accent-foreground": "slate/98",
+      "destructive": "red/51",
+      "destructive-foreground": "gray/100",
+      "border": "slate/84",
+      "input": "slate/50",
+      "ring": "blue/53"
+    },
+    "semantic-dark": {
+      "background": "slate/4",
+      "foreground": "slate/98",
+      "card": "slate/8",
+      "card-foreground": "slate/98",
+      "popover": "slate/8",
+      "popover-foreground": "slate/98",
+      "primary": "blue/60",
+      "primary-foreground": "slate/11",
+      "secondary": "slate/15",
+      "secondary-foreground": "slate/98",
+      "muted": "slate/14",
+      "muted-foreground": "slate/70",
+      "accent": "blue/60",
+      "accent-foreground": "slate/11",
+      "destructive": "red/51",
+      "destructive-foreground": "gray/100",
+      "border": "slate/18",
+      "input": "slate/45",
+      "ring": "blue/60"
+    }
+  }
+}
