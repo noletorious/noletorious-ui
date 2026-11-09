@@ -50,3 +50,9 @@ Today the system has color tokens only. Spacing, radius and type use Tailwind de
 - Contrast: text 4.5:1, UI boundaries 3:1. `npm run tokens:check` enforces this and runs in CI (`.github/workflows/tokens.yml`).
 - Keep values as `hsl(H S% L%)`. The contrast script parses only that format.
 
+### Figma
+
+- File: `noletorious-ui tokens` (key in `tokens/figma/snapshot.json`). Collections: `core` (hidden from pickers), `semantic-light`, `semantic-dark`. Figma Starter allows one mode, so light and dark are separate collections. Semantic variables alias `core` and carry web code syntax `var(--color-*)`.
+- Code is the source of truth. After a token change, update the Figma variables through the Figma MCP (`use_figma`), then refresh the snapshot: run `tokens/figma/read-variables.js` with `use_figma` and save the result under `collections` in `tokens/figma/snapshot.json`.
+- `npm run tokens:figma-diff` compares the JSON with the snapshot and exits 1 on drift. It never calls Figma, so it is only as fresh as the snapshot. It is not in CI.
+

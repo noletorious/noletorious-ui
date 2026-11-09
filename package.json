@@ -29,6 +29,7 @@
     "type-check": "tsc --noEmit",
     "tokens:build": "node sd.config.mjs",
     "tokens:check": "npm run tokens:build && git diff --exit-code -- src/styles/tokens.css && npm run contrast",
+    "tokens:figma-diff": "node scripts/figma-diff.mjs",
     "contrast": "node scripts/contrast.mjs",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
