@@ -21,3 +21,8 @@ npm-debug.log*
 
 # vercel
 .vercel
+
+# local agent tooling (not part of the library)
+/.agents
+/GEMINI.md
+/skills-lock.json
