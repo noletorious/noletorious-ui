@@ -1,0 +1,80 @@
+{
+  "color": {
+    "background": {
+      "$type": "color",
+      "$value": "{core.slate.4}"
+    },
+    "foreground": {
+      "$type": "color",
+      "$value": "{core.slate.98}"
+    },
+    "card": {
+      "$type": "color",
+      "$value": "{core.slate.8}"
+    },
+    "card-foreground": {
+      "$type": "color",
+      "$value": "{core.slate.98}"
+    },
+    "popover": {
+      "$type": "color",
+      "$value": "{core.slate.8}"
+    },
+    "popover-foreground": {
+      "$type": "color",
+      "$value": "{core.slate.98}"
+    },
+    "primary": {
+      "$type": "color",
+      "$value": "{core.blue.60}"
+    },
+    "primary-foreground": {
+      "$type": "color",
+      "$value": "{core.slate.11}"
+    },
+    "secondary": {
+      "$type": "color",
+      "$value": "{core.slate.15}"
+    },
+    "secondary-foreground": {
+      "$type": "color",
+      "$value": "{core.slate.98}"
+    },
+    "muted": {
+      "$type": "color",
+      "$value": "{core.slate.14}"
+    },
+    "muted-foreground": {
+      "$type": "color",
+      "$value": "{core.slate.70}"
+    },
+    "accent": {
+      "$type": "color",
+      "$value": "{core.blue.60}"
+    },
+    "accent-foreground": {
+      "$type": "color",
+      "$value": "{core.slate.11}"
+    },
+    "destructive": {
+      "$type": "color",
+      "$value": "{core.red.51}"
+    },
+    "destructive-foreground": {
+      "$type": "color",
+      "$value": "{core.gray.100}"
+    },
+    "border": {
+      "$type": "color",
+      "$value": "{core.slate.18}"
+    },
+    "input": {
+      "$type": "color",
+      "$value": "{core.slate.45}"
+    },
+    "ring": {
+      "$type": "color",
+      "$value": "{core.blue.60}"
+    }
+  }
+}

@@ -1,5 +1,5 @@
 /*
- * @noletorious/ui design tokens. One source of truth.
+ * @noletorious/ui styles.
  *
  * Import this AFTER `@import "tailwindcss"` in the app's CSS:
  *   @import "tailwindcss";
@@ -7,58 +7,14 @@
  *   @import "./brand.css";   (app accent overrides, optional)
  *   @source "../node_modules/@noletorious/ui/dist";   (after all imports)
  *
- * Light values live in @theme static (every variable is always emitted).
- * Dark values override the same variables under .dark.
- * Run `npm run contrast` after any change. Text pairs need 4.5:1, UI boundaries 3:1.
+ * Color tokens live in tokens/*.json and are generated into tokens.css
+ * (`npm run tokens:build`). Never edit tokens.css by hand.
+ * Run `npm run tokens:check` after any token change. Text pairs need 4.5:1, UI boundaries 3:1.
  */
 
+@import "./tokens.css";
+
 @custom-variant dark (&:is(.dark, .dark *));
-
-@theme static {
-  /* Light: crisp slate and clean paper */
-  --color-background: hsl(210 20% 98%);
-  --color-foreground: hsl(222 47% 11%);
-  --color-card: hsl(0 0% 100%);
-  --color-card-foreground: hsl(222 47% 11%);
-  --color-popover: hsl(0 0% 100%);
-  --color-popover-foreground: hsl(222 47% 11%);
-  --color-primary: hsl(221 83% 53%);
-  --color-primary-foreground: hsl(210 40% 98%);
-  --color-secondary: hsl(210 40% 93%);
-  --color-secondary-foreground: hsl(222 47% 11%);
-  --color-muted: hsl(214 32% 91%);
-  --color-muted-foreground: hsl(215 25% 36%);
-  --color-accent: hsl(217 91% 50%);
-  --color-accent-foreground: hsl(210 40% 98%);
-  --color-destructive: hsl(0 72% 51%);
-  --color-destructive-foreground: hsl(0 0% 100%);
-  --color-border: hsl(214 32% 84%);
-  --color-input: hsl(214 16% 50%);
-  --color-ring: hsl(221 83% 53%);
-}
-
-.dark {
-  /* Dark: deep obsidian with clear legibility */
-  --color-background: hsl(224 71% 4%);
-  --color-foreground: hsl(210 40% 98%);
-  --color-card: hsl(222 47% 8%);
-  --color-card-foreground: hsl(210 40% 98%);
-  --color-popover: hsl(222 47% 8%);
-  --color-popover-foreground: hsl(210 40% 98%);
-  --color-primary: hsl(217 91% 60%);
-  --color-primary-foreground: hsl(222 47% 11%);
-  --color-secondary: hsl(217 33% 15%);
-  --color-secondary-foreground: hsl(210 40% 98%);
-  --color-muted: hsl(217 33% 14%);
-  --color-muted-foreground: hsl(215 20% 70%);
-  --color-accent: hsl(217 91% 60%);
-  --color-accent-foreground: hsl(222 47% 11%);
-  --color-destructive: hsl(0 72% 51%);
-  --color-destructive-foreground: hsl(0 0% 100%);
-  --color-border: hsl(217 33% 18%);
-  --color-input: hsl(217 20% 45%);
-  --color-ring: hsl(217 91% 60%);
-}
 
 @layer base {
   * {

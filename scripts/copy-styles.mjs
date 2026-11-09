@@ -1,7 +1,10 @@
-// Ship the token file as plain CSS. Apps import it after `@import "tailwindcss"`,
-// so Tailwind in the app compiles it. It is not processed here.
+// Ship the style files as plain CSS. Apps import styles.css after `@import "tailwindcss"`,
+// so Tailwind in the app compiles it (and resolves its `@import "./tokens.css"`).
+// They are not processed here.
 import { copyFileSync, mkdirSync } from 'node:fs'
 
 mkdirSync('dist', { recursive: true })
-copyFileSync('src/styles/styles.css', 'dist/styles.css')
-console.log('copied src/styles/styles.css -> dist/styles.css')
+for (const file of ['styles.css', 'tokens.css']) {
+  copyFileSync(`src/styles/${file}`, `dist/${file}`)
+  console.log(`copied src/styles/${file} -> dist/${file}`)
+}

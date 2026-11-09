@@ -25,8 +25,10 @@
     "./package.json": "./package.json"
   },
   "scripts": {
-    "build": "vite build && node scripts/copy-styles.mjs",
+    "build": "npm run tokens:build && vite build && node scripts/copy-styles.mjs",
     "type-check": "tsc --noEmit",
+    "tokens:build": "node sd.config.mjs",
+    "tokens:check": "npm run tokens:build && git diff --exit-code -- src/styles/tokens.css && npm run contrast",
     "contrast": "node scripts/contrast.mjs",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",

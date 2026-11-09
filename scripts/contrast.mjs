@@ -93,7 +93,7 @@ function ratio(a, b) {
   return (Math.max(la, lb) + 0.05) / (Math.min(la, lb) + 0.05)
 }
 
-const base = parseTokens(readFileSync(new URL('../src/styles/styles.css', import.meta.url), 'utf8'))
+const base = parseTokens(readFileSync(new URL('../src/styles/tokens.css', import.meta.url), 'utf8'))
 let light = { ...base.light }
 let dark = { ...base.light, ...base.dark }
 
